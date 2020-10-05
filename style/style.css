@@ -1,0 +1,397 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+h1 {
+  color: #111111;
+  font-family: Work Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 60px;
+  line-height: 72px;
+}
+
+h2 {
+  color: #111111;
+  font-family: Work Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 38px;
+  line-height: 54px;
+  text-align: center;
+  margin-bottom: 72px;
+}
+
+h3 {
+  color: #111111;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 180%;
+}
+
+p, button {
+  color: #111111;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 32px;
+}
+
+button {
+  background-color: black;
+  color: white;
+  padding: 12px 16px;
+  font-weight: 500;
+  display: block;
+  border: none;
+  display: block;
+}
+button:hover {
+  background-color: #3A3A3B;
+  transition: 0.5s;
+}
+
+nav {
+  width: 100%;
+  height: 56px;
+  padding: 8px 32px;
+}
+nav img {
+  padding-top: 10.5px;
+}
+
+.grey-background {
+  background-color: #FAFAFA;
+}
+
+.with-border {
+  border: 1px solid #DEDEDE;
+  box-sizing: border-box;
+}
+
+.hero {
+  background-image: url("./images/background.svg");
+  background-repeat: repeat;
+  padding: 180px 0px;
+  border: 1px solid #DEDEDE;
+}
+.hero h1 {
+  background: linear-gradient(245deg, #F7BF48 19.39%, #D96A2C 83.42%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  margin: auto;
+}
+@media all and (min-width: 2400px) {
+  .hero h1 {
+    max-width: 980px;
+  }
+}
+@media all and (min-width: 1600px) and (max-width: 2400px) {
+  .hero h1 {
+    max-width: 880px;
+  }
+}
+@media all and (min-width: 1200px) and (max-width: 1599px) {
+  .hero h1 {
+    max-width: 720px;
+  }
+}
+.hero p, .hero button {
+  text-align: center;
+  display: block;
+  margin: 24px auto 0px;
+}
+@media all and (min-width: 2400px) {
+  .hero p, .hero button {
+    max-width: 980px;
+  }
+}
+@media all and (min-width: 1600px) and (max-width: 2400px) {
+  .hero p, .hero button {
+    max-width: 880px;
+  }
+}
+@media all and (min-width: 1200px) and (max-width: 1599px) {
+  .hero p, .hero button {
+    max-width: 720px;
+  }
+}
+.hero button {
+  margin-top: 40px;
+}
+
+.phone img {
+  display: block;
+  margin: 240px auto 80px auto;
+  padding: 0px 120px;
+}
+@media all and (min-width: 2400px) {
+  .phone img {
+    max-width: 980px;
+  }
+}
+@media all and (min-width: 1600px) and (max-width: 2400px) {
+  .phone img {
+    max-width: 880px;
+  }
+}
+@media all and (min-width: 1200px) and (max-width: 1599px) {
+  .phone img {
+    max-width: 720px;
+  }
+}
+
+.steps {
+  margin: auto;
+  padding: 40px 0px 120px 0px;
+}
+@media all and (min-width: 2400px) {
+  .steps {
+    max-width: 980px;
+  }
+}
+@media all and (min-width: 1600px) and (max-width: 2400px) {
+  .steps {
+    max-width: 880px;
+  }
+}
+@media all and (min-width: 1200px) and (max-width: 1599px) {
+  .steps {
+    max-width: 720px;
+  }
+}
+.steps .steps-line {
+  box-sizing: border-box;
+  border-left: 6px solid #EFEFEF;
+  position: relative;
+  margin: 0px auto;
+  max-width: 560px;
+}
+.steps .steps-line .step-item {
+  display: grid;
+  padding-left: 64px;
+  margin: 40px 0px 40px -6px;
+  height: 68px;
+}
+.steps .steps-line .step-item h3 {
+  display: block;
+  justify-content: center;
+}
+.steps .steps-line .step-item p, .steps .steps-line .step-item button {
+  color: #4E4D4D;
+}
+.steps .steps-line .pink {
+  border-left: 6px solid #E6629A;
+}
+.steps .steps-line .green {
+  border-left: 6px solid #3CB7BA;
+}
+.steps .steps-line .blue {
+  border-left: 6px solid #5773EB;
+}
+.steps .steps-line .yellow {
+  border-left: 6px solid #F7BF48;
+}
+.steps button {
+  margin: 80px auto 0px auto;
+}
+
+.banner {
+  padding: 72px 64px;
+  margin: 40px auto 120px auto;
+  background: url("https://source.unsplash.com/4zxp5vlmvnI/1600x900"), linear-gradient(50.11deg, #5576EC 1.91%, rgba(169, 85, 236, 0.8) 88.04%);
+  filter: drop-shadow(0px 16px 24px rgba(68, 46, 46, 0.26));
+  box-shadow: 0px 0px 24px rgba(159, 60, 236, 0.16), 0px 2px 24px rgba(17, 17, 17, 0.02);
+  background-blend-mode: overlay;
+  border-radius: 4px;
+  background-position: center;
+}
+@media all and (min-width: 2400px) {
+  .banner {
+    max-width: 980px;
+  }
+}
+@media all and (min-width: 1600px) and (max-width: 2400px) {
+  .banner {
+    max-width: 880px;
+  }
+}
+@media all and (min-width: 1200px) and (max-width: 1599px) {
+  .banner {
+    max-width: 720px;
+  }
+}
+.banner h2 {
+  color: white;
+  text-shadow: 0px 0px 8px rgba(17, 17, 17, 0.56);
+}
+
+.different {
+  margin: auto;
+  padding: 80px 0px 120px 0px;
+}
+@media all and (min-width: 2400px) {
+  .different {
+    max-width: 980px;
+  }
+}
+@media all and (min-width: 1600px) and (max-width: 2400px) {
+  .different {
+    max-width: 880px;
+  }
+}
+@media all and (min-width: 1200px) and (max-width: 1599px) {
+  .different {
+    max-width: 720px;
+  }
+}
+.different .choices {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 16px;
+  margin: 0px auto;
+}
+.different .choices h3 {
+  border-bottom: 1px solid #DEDEDE;
+  text-align: center;
+  line-height: 72px;
+  margin-bottom: 24px;
+}
+.different .choices .box {
+  border: 1px solid #DEDEDE;
+  border-radius: 4px;
+  padding: 24px 40px;
+  display: grid;
+  grid-auto-rows: 72px;
+  grid-template-columns: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+.different .choices .box .item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.different .choices .box .item img {
+  height: 32px;
+  min-width: 32px;
+}
+.different .choices .box .item p, .different .choices .box .item button {
+  margin-left: 8px;
+  line-height: 72px;
+}
+.different .choices .box #two-lines {
+  align-items: flex-start;
+  margin-top: 24px;
+}
+.different .choices .box button {
+  background-color: transparent;
+  border: 1px solid #DEDEDE;
+  color: #111111;
+}
+.different .choices .box button:hover {
+  background-color: #FAFAFA;
+}
+.different .choices .featured {
+  border: 2px solid #5773EB;
+  box-shadow: 0px 0px 24px rgba(159, 60, 236, 0.16), 0px 2px 24px rgba(17, 17, 17, 0.02);
+}
+
+.how {
+  margin: auto;
+  padding: 120px 0px;
+}
+@media all and (min-width: 2400px) {
+  .how {
+    max-width: 980px;
+  }
+}
+@media all and (min-width: 1600px) and (max-width: 2400px) {
+  .how {
+    max-width: 880px;
+  }
+}
+@media all and (min-width: 1200px) and (max-width: 1599px) {
+  .how {
+    max-width: 720px;
+  }
+}
+.how h3, .how p, .how button {
+  text-align: center;
+  color: #4E4D4D;
+  margin-bottom: 8px;
+}
+.how .card-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 16px;
+  margin-top: 40px;
+}
+.how .card-wrapper .card {
+  padding: 24px;
+  border: 1px solid #DEDEDE;
+  border-radius: 4px;
+  box-sizing: border-box;
+  display: grid;
+  justify-content: center;
+  align-items: self-end;
+}
+.how .card-wrapper .blue {
+  border: 2px solid #5773EB;
+  box-shadow: 0px 8px 24px rgba(87, 115, 235, 0.16), 0px 8px 24px rgba(17, 17, 17, 0.02);
+}
+.how .card-wrapper .blue h3 {
+  color: #5773EB;
+}
+.how .card-wrapper .green {
+  border: 2px solid #3CB7BA;
+  box-shadow: 0px 8px 24px rgba(60, 183, 186, 0.16), 0px 8px 24px rgba(17, 17, 17, 0.02);
+}
+.how .card-wrapper .green h3 {
+  color: #3CB7BA;
+}
+.how .card-wrapper .pink {
+  border: 2px solid #E6629A;
+  box-shadow: 0px 8px 24px rgba(230, 98, 154, 0.16), 0px 8px 24px rgba(17, 17, 17, 0.02);
+}
+.how .card-wrapper .pink h3 {
+  color: #E6629A;
+}
+
+.map {
+  margin: auto;
+  padding: 80px 0px;
+}
+@media all and (min-width: 2400px) {
+  .map {
+    max-width: 980px;
+  }
+}
+@media all and (min-width: 1600px) and (max-width: 2400px) {
+  .map {
+    max-width: 880px;
+  }
+}
+@media all and (min-width: 1200px) and (max-width: 1599px) {
+  .map {
+    max-width: 720px;
+  }
+}
+.map img {
+  display: block;
+  margin: 72px auto;
+}
+.map p, .map button {
+  color: #4E4D4D;
+  text-align: center;
+  margin-top: 24px;
+}
+.map button {
+  color: white;
+  margin: 72px auto;
+}
+
+/*# sourceMappingURL=style.css.map */
