@@ -3,14 +3,25 @@
 
 @import './scss/variables.scss';
 
+html {
+    font-size: 100%;
+
+    @include tablet {
+        font-size: 85%;
+    }
+
+    @include phone(portrait) {
+        font-size: 80%;
+    }
+}
 
 h1 {
     color: $text-dark;
     font-family: Work Sans;
     font-style: normal;
     font-weight: bold;
-    font-size: 60px;
-    line-height: 72px;
+    font-size: 4em;
+    line-height: 1.25em;
 }
 
 h2 {
@@ -18,8 +29,8 @@ h2 {
     font-family: Work Sans;
     font-style: normal;
     font-weight: bold;
-    font-size: 38px;
-    line-height: 54px;
+    font-size: 2.375em;
+    line-height: 1.5em;
     text-align: center;
     margin-bottom: $row-height-table;
 }
@@ -29,8 +40,8 @@ h3 {
     font-family: Inter;
     font-style: normal;
     font-weight: bold;
-    font-size: 24px;
-    line-height: 180%;
+    font-size: 1.5em;
+    line-height: 2em;
 }
 
 p {
@@ -38,8 +49,8 @@ p {
     font-family: Inter;
     font-style: normal;
     font-weight: normal;
-    font-size: 18px;
-    line-height: 32px;
+    font-size: 1.125em;
+    line-height: 2em;
 }
 
 button {
@@ -104,32 +115,48 @@ nav {
     }
 }
 
-.phone {
-    img {
-        display: block;
-        @include container;
-        margin: 240px auto 80px auto;
-        padding: 0px 120px;
-    }
-}
-
 .steps {
     @include container;
     margin: auto;
-    padding: 40px 0px 120px 0px;
+    padding: 120px 0px;
 
-    .steps-line {
-        box-sizing: border-box;
-        border-left: 6px solid #EFEFEF;
-        position: relative;
-        margin: 0px auto;
-        max-width: 560px;
+    #phone {
+        display: block;
+        max-width: 480px;
+        margin: auto;
+        @include phone(portrait){
+            max-width: 100%;
+        }
+    }
+
+    .steps-row {
+        display: grid;
+        column-gap: 24px;
+        row-gap: 40px;
+        grid-template-rows: repeat(4, 80px);
+        max-width: 600px;
+        margin: $row-height-table auto 0 auto;
+
+        @include phone(portrait) {
+            grid-template-rows: repeat(4, 100px);
+        }
 
         .step-item {
             display: grid;
-            padding-left: 64px;
-            margin: 40px 0px 40px -6px;
-            height: 68px;
+            align-items: center;
+            grid-template-columns: 0.1fr 1fr;
+            border-left: 3px solid $lines;
+
+            @include phone(portrait){
+                margin-left: 0;
+            }
+            
+            .number {
+                width: 24px;
+                margin-left: -14px;
+                text-align: center;
+                background-color: white;
+            }
 
             h3 {
                 display: block;
@@ -139,22 +166,22 @@ nav {
             p {
                 color: $text-light;
             }
-        }    
+        }
+        
+        .green {
+            color: $green;
+        }
 
         .pink {
-            border-left: 6px solid $pink;
-        }
-
-        .green {
-            border-left: 6px solid $green;
-        }
-
-        .blue {
-            border-left: 6px solid $blue;
+            color: $pink;
         }
 
         .yellow {
-            border-left: 6px solid $yellow;
+            color: $yellow;
+        }
+
+        .blue {
+            color:$blue;
         }
     }
 
@@ -176,9 +203,18 @@ nav {
     border-radius: 4px;
     background-position: center;
 
+    @include phone(portrait){
+        padding: 24px;
+    }
+
     h2 {
         color: white;
         text-shadow: 0px 0px 8px rgba(17, 17, 17, 0.56);
+        margin: 0 auto;
+
+        @include phone(portrait) {
+            font-size: 2em;
+        }
     }
 }
 
@@ -192,7 +228,20 @@ nav {
         grid-template-columns: 1fr 1fr;
         grid-column-gap: 16px;
         margin: 0px auto;
+
+        @include tablet {
+            grid-template-columns: 380px;
+            row-gap: 32px;
+            justify-content: center;
+        }
         
+
+        @include phone(portrait) {
+            grid-template-columns: 100%;
+            row-gap: 32px;
+            justify-content: center;
+        }
+
         h3 {
             border-bottom: 1px solid $lines;
             text-align: center;
@@ -215,6 +264,7 @@ nav {
                 display: flex;
                 flex-direction: row;
                 align-items: center;
+                min-width: 320px;
 
                 img {
                     height: 32px;
@@ -266,6 +316,11 @@ nav {
         grid-template-columns: 1fr 1fr 1fr;
         column-gap: 16px;
         margin-top: 40px;
+
+        @include phone(portrait){
+            grid-template-columns: 1fr;
+            row-gap: 24px;
+        }
 
         .card {
             padding: 24px;
@@ -322,5 +377,11 @@ nav {
     button {
         color: white;
         margin: $row-height-table auto;
+    }
+
+    @include tablet {
+        h2 {
+            margin-bottom: 24px;
+        }
     }
 }

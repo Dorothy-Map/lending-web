@@ -54,9 +54,21 @@ $row-height-table: 72px;
         max-width: 980px;
     }
     @include wide-hd() {
-        max-width: 880px;
+        max-width: 980px;
     }
     @include wide() {
-        max-width: 720px;
+        max-width: 980px;
+    }
+
+    @include desktop() {
+        max-width: 90%;
+    }
+
+    @include tablet() {
+        max-width: 90%;
+    }
+
+    @include phone(portrait) {
+        max-width: 90%;
     }
 }
