@@ -67,6 +67,12 @@ button {
         background-color:#3A3A3B;
         transition: 0.5s;
     }
+
+    &:disabled {
+        background-color: #757575;
+        color: $lines;
+        cursor: no-drop;
+    }
 }
 
 nav {
@@ -94,8 +100,12 @@ nav {
     padding: 180px 0px;
     border: 1px solid $lines;
 
-    h1 {
+    .container {
         @include container;
+        margin: auto;
+    }
+
+    h1 {
         background: $yellow-gradient;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -104,14 +114,41 @@ nav {
     }
 
     p {
-        @include container;
         text-align: center;
         display: block;
-        margin: 24px auto 0px;
+        max-width: 100%;
+        // margin: 24px auto 0px;
     }
 
-    button {
-        margin-top: 40px;
+    form {
+        margin: 40px auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    input {
+        @extend p;
+        padding: 11px 16px;
+        margin-right: 8;
+        width: 300px;
+        text-align: left;
+        border-radius: 0%;
+        border: 1px solid $text-dark;
+    }
+
+    #form-response {
+        transition: 0.5s;
+        display: block;
+        border: 2px solid $lines;
+        border-radius: 2;
+        background: white;
+        border-radius: 2px;
+        padding: 8px;
+        width: 420px;
+        margin: auto;
+        display: none;
     }
 }
 
@@ -383,5 +420,11 @@ nav {
         h2 {
             margin-bottom: 24px;
         }
+    }
+}
+
+.disappear-mobile {
+    @include phone(portrait) {
+        display: none;
     }
 }

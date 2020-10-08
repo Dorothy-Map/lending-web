@@ -25,8 +25,6 @@
     <meta property="twitter:title" content="Disaster insurance you can trust">
     <meta property="twitter:description" content="Approximately 250 million Americans are exposed to and unprotected against natural hazards, including flood, tornado, wildfire and earthquake. You get damaged, Dorothy pays instantly.">
     <meta property="twitter:image" content="https://github.com/Dorothy-Map/dorothy-web/blob/master/style/images/images/dorothy.png">
-
-    <script type="text/javascript" src="js/main.js"></script>
 </head>
 
 <body>
@@ -34,9 +32,19 @@
         <img src="./style/images/logo-dorothy.svg">
     </nav>
     <section class="hero">
-        <h1>Disaster insurance you can trust</h1>
-        <p>Approximately 250 million Americans are exposed to and unprotected against natural hazards, including flood, tornado, wildfire and earthquake. You get damaged, Dorothy pays instantly.</p>
-        <button>Get protected now</button>
+        <div class="container">
+            <h1>Disaster insurance you can trust</h1>
+            <p>Approximately 250 million Americans are exposed to and unprotected against natural hazards, including flood, tornado, wildfire and earthquake. You get damaged, Dorothy pays instantly.</p>
+            <!-- <form id="insurance-form">
+                <input type="text" id="email-form" name="email" placeholder="Your email here">
+                <button type="submit" id="submit-button">Get in line for protection</button>
+            </form> -->
+            <form id="insurance-form">
+                <input type="text" id="email-form" name="email" placeholder="Your email here">
+                <button type="submit" id="submit-button">Get in line for protection</button>
+            </form>
+            <div class="message" id="form-response"></div>
+        </div>
     </section>
 
     <section class="steps">
@@ -65,7 +73,7 @@
                 </div>
             </div>
         </div>
-        <button>Get protected now</button>
+        <!-- <button>Get protected now</button> -->
     </section>
 
     <section class="banner">
@@ -105,9 +113,9 @@
                         <img src="./style/icons/check.svg">
                         <p style="line-height: 32px;">Protection against <span style="color: #5773EB;">the big 4 natural disasters</span></p>
                     </div>
-                <div></div>
-                <div></div>
-                    <button>Get protected now</button>
+                    <div class="disappear-mobile"></div>
+                    <div></div>
+                    <!-- <button>Get protected now</button> -->
                 </div>
             </div>
         </div>
@@ -136,7 +144,9 @@
             <img src="./style/images/map.svg">
             <h2>70% of property owners are uninsured for a natural disaster</h2>
             <p>And every year disasters are more frequent. You don't want to be unprotected. Get a parametric coverage with us and get paid instantly if an event like this happens.</p>
-            <button>Get protected now</button>
+            <!-- <button>Get protected now</button> -->
         <div>
     </section>
+
+    <script type="text/javascript" src="./js/form.js"></script>
 </body>
