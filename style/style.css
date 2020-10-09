@@ -188,6 +188,11 @@ nav img {
   margin: auto;
   display: none;
 }
+@media all and (min-width: 320px) and (max-width: 767px) and (orientation: portrait) {
+  .hero #form-response {
+    width: 100%;
+  }
+}
 
 .steps {
   margin: auto;

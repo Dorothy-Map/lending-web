@@ -166,6 +166,10 @@ nav {
         width: 420px;
         margin: auto;
         display: none;
+
+        @include phone(portrait) {
+            width: 100%;
+        }
     }
 }
 
