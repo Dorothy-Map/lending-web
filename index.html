@@ -31,17 +31,13 @@
     <nav>
         <img src="./style/images/logo-dorothy.svg">
     </nav>
-    <section class="hero">
-        <div class="container">
+    <section class="hero" id="hero">
+        <div class="content">
             <h1>Disaster insurance you can trust</h1>
             <p>Approximately 250 million Americans are exposed to and unprotected against natural hazards, including flood, tornado, wildfire and earthquake. You get damaged, Dorothy pays instantly.</p>
-            <!-- <form id="insurance-form">
-                <input type="text" id="email-form" name="email" placeholder="Your email here">
-                <button type="submit" id="submit-button">Get in line for protection</button>
-            </form> -->
             <form id="insurance-form">
-                <input type="text" id="email-form" name="email" placeholder="Your email here">
-                <button type="submit" id="submit-button">Get in line for protection</button>
+                <input type="text" id="email-form" name="email" placeholder="Your email address">
+                <button type="submit" id="submit-button">Join the waitlist</button>
             </form>
             <div class="message" id="form-response"></div>
         </div>
@@ -73,7 +69,9 @@
                 </div>
             </div>
         </div>
-        <!-- <button>Get protected now</button> -->
+        <a href="#hero">
+            <button>Get protected</button>
+        </a>
     </section>
 
     <section class="banner">
@@ -144,9 +142,19 @@
             <img src="./style/images/map.svg">
             <h2>70% of property owners are uninsured for a natural disaster</h2>
             <p>And every year disasters are more frequent. You don't want to be unprotected. Get a parametric coverage with us and get paid instantly if an event like this happens.</p>
-            <!-- <button>Get protected now</button> -->
+            <a href="#hero">
+                <button>Get protected</button>
+            </a>
         <div>
     </section>
+
+    <footer>
+        <div class="content">
+            <a href="https://www.linkedin.com/company/dorothymap">Linkedin</p>
+            <a href="mailto:contact@dorothymap.com?subject=Contact">Contact us</a>
+            <a href="https://dorothymap.com">Data Provider</a>
+        </div>
+    </footer>
 
     <script type="text/javascript" src="./js/form.js"></script>
 </body>

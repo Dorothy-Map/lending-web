@@ -2,15 +2,10 @@ window.addEventListener('DOMContentLoaded', (event) => {
     console.log('DOM fully loaded and parsed');
 });
 
-// const buttonForm = document.getElementById('submit-button');
-// const insuranceForm = document.getElementById('insurance-form');
-// const emailForm = document.getElementById('email-form');
-// const formResponse = document.getElementById('form-response');
-
-const buttonForm = document.getElementsByTagName('button');
-const insuranceForm = document.forms[0];
-const emailForm = document.getElementsByTagName('input');
-const formResponse = document.getElementsByClassName('message');
+const buttonForm = document.getElementById('submit-button');
+const insuranceForm = document.getElementById('insurance-form');
+const emailForm = document.getElementById('email-form');
+const formResponse = document.getElementById('form-response');
 
 const alreadyExists = "Contact email exists";
 
