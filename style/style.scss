@@ -1,83 +1,72 @@
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@500;600;700;800&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@500;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
-
 @import './scss/variables.scss';
+@import './scss/home.scss';
 
 html {
-    font-size: 100%;
+    font-family: 'Inter', 'sans-serif';
     scroll-behavior: smooth;
-
-    @include tablet {
-        font-size: 85%;
-    }
-
-    @include phone(portrait) {
-        font-size: 80%;
-    }
 }
 
 h1 {
     color: $text-dark;
-    font-family: Work Sans;
     font-style: normal;
     font-weight: bold;
-    font-size: 4em;
-    line-height: 1.25em;
+    font-size: 40px;
+    line-height: 56px;
 }
 
 h2 {
     color: $text-dark;
-    font-family: Work Sans;
     font-style: normal;
     font-weight: bold;
-    font-size: 2.375em;
-    line-height: 1.5em;
-    text-align: center;
-    margin-bottom: $row-height-table;
+    font-size: 32px;
+    line-height: 56px;
 }
 
 h3 {
     color: $text-dark;
-    font-family: Inter;
     font-style: normal;
     font-weight: bold;
-    font-size: 1.5em;
-    line-height: 2em;
+    font-size: 24px;
+    line-height: 40px;
+}
+
+h5 {
+    color: $blue;
+    font-weight: bold;
+    font-size: 20px;
+    font-kerning: 1px;
+    font-variant: small-caps;
 }
 
 p {
-    color: $text-dark;
-    font-family: Inter;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 1.125em;
-    line-height: 2em;
+    color: $text-light;
+    font-size: 16px;
+    line-height: 32px;
+}
+
+.centered {
+    text-align: center;
 }
 
 button {
-    @extend p;
-    background-color: black;
-    color: white;
-    padding: 12px 16px;
-    font-weight: 500;
-    display: block;
+    background-color: $blue;
     border: none;
-    display: block;
+    @extend p;
+    // text-transform: uppercase;
+    color: white;
+    transition: 0.5s;
 
     &:hover {
-        background-color:#3A3A3B;
-        transition: 0.5s;
+        background-color: $light-blue;
     }
 
-    &:disabled {
-        background-color: #757575;
-        color: $lines;
-        cursor: no-drop;
-    }
-
-    @include phone(portrait) {
-        width: 100%;
-        height: 48px;
+    &.medium {
+        padding: 8px 32px;    
+        font-weight: 500;
+        border-radius: 4px; 
+        margin-top: 24px;
     }
 }
 
@@ -95,380 +84,173 @@ nav {
     }
 }
 
-.grey-background {
-    background-color: #FAFAFA;
-}
-
-.with-border {
-    border: 1px solid $lines;
-    box-sizing: border-box;
-}
-
-.hero {
-    background-image: url('./images/background.svg');
-    background-repeat: repeat;
-    padding: 180px 0px;
-    border: 1px solid $lines;
-
-    .content {
-        @include container;
-        margin: auto;
-    }
-
-    h1 {
-        background: $yellow-gradient;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        text-align: center;
-        margin: auto;
-    }
-
-    p {
-        text-align: center;
-        display: block;
-        max-width: 100%;
-    }
-
-    form {
-        margin: 40px auto;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-
-        @include phone(portrait) {
-            flex-direction: column;
-        }
-    }
-
-    input {
-        @extend p;
-        padding: 11px 16px;
-        margin-right: 8;
-        width: 300px;
-        text-align: left;
-        border-radius: 0%;
-        border: 1px solid $text-dark;
-
-        @include phone(portrait) {
-            width: 100%;
-            margin-bottom: 24px;
-        }
-    }
-
-    #form-response {
-        display: block;
-        border: 2px solid $lines;
-        border-radius: 2;
-        background: white;
-        border-radius: 2px;
-        padding: 8px;
-        width: 420px;
-        margin: auto;
-        display: none;
-
-        @include phone(portrait) {
-            width: 100%;
-        }
-    }
-}
-
-.steps {
+.container {
     @include container;
     margin: auto;
-    padding: 120px 0px;
+}
 
-    #phone {
-        display: block;
-        max-width: 480px;
-        margin: auto;
-        @include phone(portrait){
-            max-width: 100%;
-        }
+.hor-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 48px;
+    align-items: center;
+
+    .text-left {
+        padding-right: 32px;
     }
 
-    .steps-row {
-        display: grid;
-        column-gap: 24px;
-        row-gap: 40px;
-        grid-template-rows: repeat(4, 80px);
-        max-width: 600px;
-        margin: $row-height-table auto 0 auto;
-
-        @include phone(portrait) {
-            grid-template-rows: repeat(4, 100px);
+    &.feature{
+    margin-top: 120px;
+        &:nth-of-type(n+2) {
+            margin-top: 200px;
         }
 
-        .step-item {
-            display: grid;
-            align-items: center;
-            grid-template-columns: 0.1fr 1fr;
-            border-left: 3px solid $lines;
-
-            @include phone(portrait){
-                margin-left: 0;
-            }
-            
-            .number {
-                width: 24px;
-                margin-left: -14px;
-                text-align: center;
-                background-color: white;
-            }
-
-            h3 {
-                display: block;
-                justify-content: center;
-            }
-
-            p {
-                color: $text-light;
-            }
-        }
-        
-        .green {
-            color: $green;
-        }
-
-        .pink {
-            color: $pink;
-        }
-
-        .yellow {
-            color: $yellow;
-        }
-
-        .blue {
-            color:$blue;
+        &:last-of-type {
+            padding-bottom: 120px;
         }
     }
+}
 
-    button {
-        margin: 80px auto 0px auto;
+
+// section colors
+.dark-section {
+    background-color: #111;
+    
+    h1, p {
+        color: white;
+    }
+
+    h5 {
+        color: $grey-2;
+    }
+    
+}
+
+.grey-section {
+    background-color: $grey-1;
+}
+
+//sections
+.hero {
+    align-items: center;
+
+    .hero-img{
+        width: 520px;
+        height: 640px;
+        position: relative;
+
+        #phone {
+            width: 50%;
+            position: absolute;
+            bottom: 40;
+            left: 40;
+            z-index: 1;
+        }
+
+        #owner {
+            position: absolute;
+            top: 10%;
+            right: 0;
+            max-width: 80%;
+            z-index: 0;
+            border-radius: 8px;
+        }
+    }
+}
+
+.logos {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 120px;
+    // border-top: 1px solid $grey-2;
+    // border-bottom: 1px solid $grey-2;
+
+    div {
+        width: 160px;
+
+        #plug {
+            max-width: 75%;
+        }
+
+        #urban {
+            width: 70%;
+        }
+    }
+}
+
+.explanations {
+    padding: 120px 0;
+
+    &#alternative {
+        // background-color: $grey-1;
+        border-radius: 8px;
+        padding: 60px 80px 60px 80px;
+        margin-top: 40px;
+        box-shadow: 0px 4px 13px 4px rgba(17, 17, 17, 0.05);
+    }
+
+    .img {
+        position: relative;
+        padding: 0 16px;
+
+        #card {
+            position: absolute;
+            bottom: -32;
+            left: 0;
+            width: 280px;
+        }
+
+        #owner, #service {
+            border-radius: 4px;
+        }
+
+        #price {
+            position: absolute;
+            width: 200px;
+            bottom: 16px;
+            right: 32px;
+        }
+    }
+}
+
+.bullet {
+    display: grid;
+    grid-template-columns: 32px 1fr;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 24px;
+    background-color: $grey-1;
+    width: fit-content;
+    border-radius: 4px;
+    margin-top: 24px;
+
+    i {
+        color:red;
     }
 }
 
 .banner {
-    @include container;
-    padding: 72px 64px;
-    margin: 40px auto 120px auto;
-    background: 
-        url("https://source.unsplash.com/4zxp5vlmvnI/1600x900"),
-        linear-gradient(50.11deg, #5576EC 1.91%, rgba(169, 85, 236, 0.8) 88.04%);
-    filter: drop-shadow(0px 16px 24px rgba(68, 46, 46, 0.26));
-    box-shadow: $shadow;
-    background-blend-mode: overlay;
+    position: relative;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    // min-width: 100vw;
+    height: 800px;
+    background-image: url('./images/mask.png');
+    background-size: contain;
+    background-repeat: no-repeat;
     border-radius: 4px;
-    background-position: center;
-
-    @include phone(portrait){
-        padding: 24px;
-    }
 
     h2 {
         color: white;
-        text-shadow: 0px 0px 8px rgba(17, 17, 17, 0.56);
-        margin: 0 auto;
-
-        @include phone(portrait) {
-            font-size: 2em;
-        }
-    }
-}
-
-.different {
-    @include container;
-    margin: auto;
-    padding: 80px 0px 120px 0px;
-
-    .choices {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-column-gap: 16px;
-        margin: 0px auto;
-
-        @include tablet {
-            grid-template-columns: 380px;
-            row-gap: 32px;
-            justify-content: center;
-        }
-        
-
-        @include phone(portrait) {
-            grid-template-columns: 100%;
-            row-gap: 32px;
-            justify-content: center;
-        }
-
-        h3 {
-            border-bottom: 1px solid $lines;
-            text-align: center;
-            line-height: $row-height-table;
-            margin-bottom: 24px;
-        }
-
-        .box {
-            border: 1px solid $lines;
-            border-radius: 4px;
-            padding: 24px 40px;
-            display: grid;
-            grid-auto-rows: $row-height-table;
-            grid-template-columns: 100%;
-            justify-content: center;
-            align-items: center;
-            background-color: white;
-
-            .item {
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                min-width: 320px;
-
-                img {
-                    height: 32px;
-                    min-width: 32px;
-                }
-
-                p {
-                    margin-left: 8px;
-                    line-height: $row-height-table;
-                }
-            }
-
-            #two-lines {
-                align-items: flex-start;
-                margin-top: 24px;
-            }
-
-            button {
-                background-color: transparent;
-                border: 1px solid $lines;
-                color: $text-dark;
-    
-                &:hover {
-                    background-color: #FAFAFA;
-                }
-            }
-        }
-
-        .featured {
-            border: 2px solid $blue;
-            box-shadow: $shadow;
-        }
-    }
-}
-
-.how {
-    @include container;
-    margin: auto;
-    padding: 120px 0px;
-
-    h3, p {
-        text-align: center;
-        color: $text-light;
-        margin-bottom: 8px;
-    }
-
-    .card-wrapper {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        column-gap: 16px;
-        margin-top: 40px;
-
-        @include phone(portrait){
-            grid-template-columns: 1fr;
-            row-gap: 24px;
-        }
-
-        .card {
-            padding: 24px;
-            border: 1px solid $lines;
-            border-radius: 4px;
-            box-sizing: border-box;
-            display: grid;
-            justify-content: center;
-            align-items: self-end;
-        }
-
-        .blue {
-            border: 2px solid $blue;
-            box-shadow: 0px 8px 24px rgba(87, 115, 235, 0.16), 0px 8px 24px rgba(17, 17, 17, 0.02);
-            h3 {
-                color: $blue;
-            }
-        }
-
-        .green {
-            border: 2px solid $green;
-            box-shadow: 0px 8px 24px rgba(60, 183, 186, 0.16), 0px 8px 24px rgba(17, 17, 17, 0.02);
-            h3 {
-                color: $green;
-            }
-        }
-
-        .pink {
-            border: 2px solid $pink;
-            box-shadow: 0px 8px 24px rgba(230, 98, 154, 0.16), 0px 8px 24px rgba(17, 17, 17, 0.02);
-            h3 {
-                color: $pink;
-            }
-        }
-    }
-}
-
-.map {
-    @include container;
-    margin: auto;
-    padding: 80px 0px;
-
-    img {
-        display: block;
-        margin: $row-height-table auto;
-    }
-
-    p {
-        color: $text-light;
-        text-align: center;
-        margin-top: 24px;
     }
 
     button {
-        color: white;
-        margin: $row-height-table auto;
-    }
-
-    @include tablet {
-        h2 {
-            margin-bottom: 24px;
-        }
-    }
-}
-
-.disappear-mobile {
-    @include phone(portrait) {
-        display: none;
-    }
-}
-
-footer {
-    background: #fafafa;
-
-    a {
-        @extend p;
-        font-size: 1em;
-        
-        &:hover {
-            transition: 0.5s;
-            color: $pink;
-        }
-    }
-
-    .content {
-        @include container;
-        margin: auto;
-        padding: 48px 0px;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(3, 32px);
+        display: block;
+        margin: 32px auto;
+        font-weight: 600;
     }
 }

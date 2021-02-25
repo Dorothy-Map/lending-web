@@ -1,81 +1,65 @@
-@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@500;600;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
 html {
-  font-size: 100%;
+  font-family: "Inter", "sans-serif";
   scroll-behavior: smooth;
-}
-@media all and (min-width: 768px) and (max-width: 1024px) {
-  html {
-    font-size: 85%;
-  }
-}
-@media all and (min-width: 320px) and (max-width: 767px) and (orientation: portrait) {
-  html {
-    font-size: 80%;
-  }
 }
 
 h1 {
-  color: #111111;
-  font-family: Work Sans;
+  color: #101010;
   font-style: normal;
   font-weight: bold;
-  font-size: 4em;
-  line-height: 1.25em;
+  font-size: 40px;
+  line-height: 56px;
 }
 
 h2 {
-  color: #111111;
-  font-family: Work Sans;
+  color: #101010;
   font-style: normal;
   font-weight: bold;
-  font-size: 2.375em;
-  line-height: 1.5em;
-  text-align: center;
-  margin-bottom: 72px;
+  font-size: 32px;
+  line-height: 56px;
 }
 
 h3 {
-  color: #111111;
-  font-family: Inter;
+  color: #101010;
   font-style: normal;
   font-weight: bold;
-  font-size: 1.5em;
-  line-height: 2em;
+  font-size: 24px;
+  line-height: 40px;
 }
 
-p, footer a, .hero input, button {
-  color: #111111;
-  font-family: Inter;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 1.125em;
-  line-height: 2em;
+h5 {
+  color: #2F33FF;
+  font-weight: bold;
+  font-size: 20px;
+  font-kerning: 1px;
+  font-variant: small-caps;
+}
+
+p, button {
+  color: #6A6A6A;
+  font-size: 16px;
+  line-height: 32px;
+}
+
+.centered {
+  text-align: center;
 }
 
 button {
-  background-color: black;
-  color: white;
-  padding: 12px 16px;
-  font-weight: 500;
-  display: block;
+  background-color: #2F33FF;
   border: none;
-  display: block;
-}
-button:hover {
-  background-color: #3A3A3B;
+  color: white;
   transition: 0.5s;
 }
-button:disabled {
-  background-color: #757575;
-  color: #DEDEDE;
-  cursor: no-drop;
+button:hover {
+  background-color: #2563EB;
 }
-@media all and (min-width: 320px) and (max-width: 767px) and (orientation: portrait) {
-  button {
-    width: 100%;
-    height: 48px;
-  }
+button.medium {
+  padding: 8px 32px;
+  font-weight: 500;
+  border-radius: 4px;
+  margin-top: 24px;
 }
 
 a {
@@ -91,551 +75,177 @@ nav img {
   padding-top: 10.5px;
 }
 
-.grey-background {
-  background-color: #FAFAFA;
+.container {
+  margin: auto;
+}
+@media all and (min-width: 2400px) {
+  .container {
+    max-width: 1040px;
+  }
+}
+@media all and (min-width: 1600px) and (max-width: 2400px) {
+  .container {
+    max-width: 980px;
+  }
+}
+@media all and (min-width: 1200px) and (max-width: 1599px) {
+  .container {
+    max-width: 980px;
+  }
+}
+@media all and (min-width: 1024px) and (max-width: 1199px) {
+  .container {
+    max-width: 90%;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 1024px) {
+  .container {
+    max-width: 90%;
+  }
+}
+@media all and (min-width: 320px) and (max-width: 767px) and (orientation: portrait) {
+  .container {
+    max-width: 90%;
+  }
 }
 
-.with-border {
-  border: 1px solid #DEDEDE;
-  box-sizing: border-box;
+.hor-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 48px;
+  align-items: center;
+}
+.hor-2 .text-left {
+  padding-right: 32px;
+}
+.hor-2.feature {
+  margin-top: 120px;
+}
+.hor-2.feature:nth-of-type(n+2) {
+  margin-top: 200px;
+}
+.hor-2.feature:last-of-type {
+  padding-bottom: 120px;
+}
+
+.dark-section {
+  background-color: #111;
+}
+.dark-section h1, .dark-section p, .dark-section button {
+  color: white;
+}
+.dark-section h5 {
+  color: #ECECEC;
+}
+
+.grey-section {
+  background-color: #f2f2f2;
 }
 
 .hero {
-  background-image: url("./images/background.svg");
-  background-repeat: repeat;
-  padding: 180px 0px;
-  border: 1px solid #DEDEDE;
+  align-items: center;
 }
-.hero .content {
-  margin: auto;
+.hero .hero-img {
+  width: 520px;
+  height: 640px;
+  position: relative;
 }
-@media all and (min-width: 2400px) {
-  .hero .content {
-    max-width: 980px;
-  }
+.hero .hero-img #phone {
+  width: 50%;
+  position: absolute;
+  bottom: 40;
+  left: 40;
+  z-index: 1;
 }
-@media all and (min-width: 1600px) and (max-width: 2400px) {
-  .hero .content {
-    max-width: 980px;
-  }
+.hero .hero-img #owner {
+  position: absolute;
+  top: 10%;
+  right: 0;
+  max-width: 80%;
+  z-index: 0;
+  border-radius: 8px;
 }
-@media all and (min-width: 1200px) and (max-width: 1599px) {
-  .hero .content {
-    max-width: 980px;
-  }
-}
-@media all and (min-width: 1024px) and (max-width: 1199px) {
-  .hero .content {
-    max-width: 90%;
-  }
-}
-@media all and (min-width: 768px) and (max-width: 1024px) {
-  .hero .content {
-    max-width: 90%;
-  }
-}
-@media all and (min-width: 320px) and (max-width: 767px) and (orientation: portrait) {
-  .hero .content {
-    max-width: 90%;
-  }
-}
-.hero h1 {
-  background: linear-gradient(245deg, #F7BF48 19.39%, #D96A2C 83.42%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-align: center;
-  margin: auto;
-}
-.hero p, .hero footer a, footer .hero a, .hero input, .hero button {
-  text-align: center;
-  display: block;
-  max-width: 100%;
-}
-.hero form {
-  margin: 40px auto;
+
+.logos {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  padding: 40px 120px;
 }
-@media all and (min-width: 320px) and (max-width: 767px) and (orientation: portrait) {
-  .hero form {
-    flex-direction: column;
-  }
+.logos div {
+  width: 160px;
 }
-.hero input {
-  padding: 11px 16px;
-  margin-right: 8;
-  width: 300px;
-  text-align: left;
-  border-radius: 0%;
-  border: 1px solid #111111;
+.logos div #plug {
+  max-width: 75%;
 }
-@media all and (min-width: 320px) and (max-width: 767px) and (orientation: portrait) {
-  .hero input {
-    width: 100%;
-    margin-bottom: 24px;
-  }
-}
-.hero #form-response {
-  display: block;
-  border: 2px solid #DEDEDE;
-  border-radius: 2;
-  background: white;
-  border-radius: 2px;
-  padding: 8px;
-  width: 420px;
-  margin: auto;
-  display: none;
-}
-@media all and (min-width: 320px) and (max-width: 767px) and (orientation: portrait) {
-  .hero #form-response {
-    width: 100%;
-  }
+.logos div #urban {
+  width: 70%;
 }
 
-.steps {
-  margin: auto;
-  padding: 120px 0px;
+.explanations {
+  padding: 120px 0;
 }
-@media all and (min-width: 2400px) {
-  .steps {
-    max-width: 980px;
-  }
+.explanations#alternative {
+  border-radius: 8px;
+  padding: 60px 80px 60px 80px;
+  margin-top: 40px;
+  box-shadow: 0px 4px 13px 4px rgba(17, 17, 17, 0.05);
 }
-@media all and (min-width: 1600px) and (max-width: 2400px) {
-  .steps {
-    max-width: 980px;
-  }
+.explanations .img {
+  position: relative;
+  padding: 0 16px;
 }
-@media all and (min-width: 1200px) and (max-width: 1599px) {
-  .steps {
-    max-width: 980px;
-  }
+.explanations .img #card {
+  position: absolute;
+  bottom: -32;
+  left: 0;
+  width: 280px;
 }
-@media all and (min-width: 1024px) and (max-width: 1199px) {
-  .steps {
-    max-width: 90%;
-  }
+.explanations .img #owner, .explanations .img #service {
+  border-radius: 4px;
 }
-@media all and (min-width: 768px) and (max-width: 1024px) {
-  .steps {
-    max-width: 90%;
-  }
+.explanations .img #price {
+  position: absolute;
+  width: 200px;
+  bottom: 16px;
+  right: 32px;
 }
-@media all and (min-width: 320px) and (max-width: 767px) and (orientation: portrait) {
-  .steps {
-    max-width: 90%;
-  }
-}
-.steps #phone {
-  display: block;
-  max-width: 480px;
-  margin: auto;
-}
-@media all and (min-width: 320px) and (max-width: 767px) and (orientation: portrait) {
-  .steps #phone {
-    max-width: 100%;
-  }
-}
-.steps .steps-row {
+
+.bullet {
   display: grid;
-  column-gap: 24px;
-  row-gap: 40px;
-  grid-template-rows: repeat(4, 80px);
-  max-width: 600px;
-  margin: 72px auto 0 auto;
-}
-@media all and (min-width: 320px) and (max-width: 767px) and (orientation: portrait) {
-  .steps .steps-row {
-    grid-template-rows: repeat(4, 100px);
-  }
-}
-.steps .steps-row .step-item {
-  display: grid;
+  grid-template-columns: 32px 1fr;
+  margin: auto;
   align-items: center;
-  grid-template-columns: 0.1fr 1fr;
-  border-left: 3px solid #DEDEDE;
-}
-@media all and (min-width: 320px) and (max-width: 767px) and (orientation: portrait) {
-  .steps .steps-row .step-item {
-    margin-left: 0;
-  }
-}
-.steps .steps-row .step-item .number {
-  width: 24px;
-  margin-left: -14px;
-  text-align: center;
-  background-color: white;
-}
-.steps .steps-row .step-item h3 {
-  display: block;
   justify-content: center;
+  padding: 16px 24px;
+  background-color: #f2f2f2;
+  width: fit-content;
+  border-radius: 4px;
+  margin-top: 24px;
 }
-.steps .steps-row .step-item p, .steps .steps-row .step-item footer a, footer .steps .steps-row .step-item a, .steps .steps-row .step-item button, .steps .steps-row .step-item .hero input, .hero .steps .steps-row .step-item input {
-  color: #4E4D4D;
-}
-.steps .steps-row .green {
-  color: #3CB7BA;
-}
-.steps .steps-row .pink {
-  color: #E6629A;
-}
-.steps .steps-row .yellow {
-  color: #F7BF48;
-}
-.steps .steps-row .blue {
-  color: #5773EB;
-}
-.steps button {
-  margin: 80px auto 0px auto;
+.bullet i {
+  color: red;
 }
 
 .banner {
-  padding: 72px 64px;
-  margin: 40px auto 120px auto;
-  background: url("https://source.unsplash.com/4zxp5vlmvnI/1600x900"), linear-gradient(50.11deg, #5576EC 1.91%, rgba(169, 85, 236, 0.8) 88.04%);
-  filter: drop-shadow(0px 16px 24px rgba(68, 46, 46, 0.26));
-  box-shadow: 0px 0px 24px rgba(159, 60, 236, 0.16), 0px 2px 24px rgba(17, 17, 17, 0.02);
-  background-blend-mode: overlay;
+  position: relative;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  height: 800px;
+  background-image: url("./images/mask.png");
+  background-size: contain;
+  background-repeat: no-repeat;
   border-radius: 4px;
-  background-position: center;
-}
-@media all and (min-width: 2400px) {
-  .banner {
-    max-width: 980px;
-  }
-}
-@media all and (min-width: 1600px) and (max-width: 2400px) {
-  .banner {
-    max-width: 980px;
-  }
-}
-@media all and (min-width: 1200px) and (max-width: 1599px) {
-  .banner {
-    max-width: 980px;
-  }
-}
-@media all and (min-width: 1024px) and (max-width: 1199px) {
-  .banner {
-    max-width: 90%;
-  }
-}
-@media all and (min-width: 768px) and (max-width: 1024px) {
-  .banner {
-    max-width: 90%;
-  }
-}
-@media all and (min-width: 320px) and (max-width: 767px) and (orientation: portrait) {
-  .banner {
-    max-width: 90%;
-  }
-}
-@media all and (min-width: 320px) and (max-width: 767px) and (orientation: portrait) {
-  .banner {
-    padding: 24px;
-  }
 }
 .banner h2 {
   color: white;
-  text-shadow: 0px 0px 8px rgba(17, 17, 17, 0.56);
-  margin: 0 auto;
 }
-@media all and (min-width: 320px) and (max-width: 767px) and (orientation: portrait) {
-  .banner h2 {
-    font-size: 2em;
-  }
-}
-
-.different {
-  margin: auto;
-  padding: 80px 0px 120px 0px;
-}
-@media all and (min-width: 2400px) {
-  .different {
-    max-width: 980px;
-  }
-}
-@media all and (min-width: 1600px) and (max-width: 2400px) {
-  .different {
-    max-width: 980px;
-  }
-}
-@media all and (min-width: 1200px) and (max-width: 1599px) {
-  .different {
-    max-width: 980px;
-  }
-}
-@media all and (min-width: 1024px) and (max-width: 1199px) {
-  .different {
-    max-width: 90%;
-  }
-}
-@media all and (min-width: 768px) and (max-width: 1024px) {
-  .different {
-    max-width: 90%;
-  }
-}
-@media all and (min-width: 320px) and (max-width: 767px) and (orientation: portrait) {
-  .different {
-    max-width: 90%;
-  }
-}
-.different .choices {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-column-gap: 16px;
-  margin: 0px auto;
-}
-@media all and (min-width: 768px) and (max-width: 1024px) {
-  .different .choices {
-    grid-template-columns: 380px;
-    row-gap: 32px;
-    justify-content: center;
-  }
-}
-@media all and (min-width: 320px) and (max-width: 767px) and (orientation: portrait) {
-  .different .choices {
-    grid-template-columns: 100%;
-    row-gap: 32px;
-    justify-content: center;
-  }
-}
-.different .choices h3 {
-  border-bottom: 1px solid #DEDEDE;
-  text-align: center;
-  line-height: 72px;
-  margin-bottom: 24px;
-}
-.different .choices .box {
-  border: 1px solid #DEDEDE;
-  border-radius: 4px;
-  padding: 24px 40px;
-  display: grid;
-  grid-auto-rows: 72px;
-  grid-template-columns: 100%;
-  justify-content: center;
-  align-items: center;
-  background-color: white;
-}
-.different .choices .box .item {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  min-width: 320px;
-}
-.different .choices .box .item img {
-  height: 32px;
-  min-width: 32px;
-}
-.different .choices .box .item p, .different .choices .box .item footer a, footer .different .choices .box .item a, .different .choices .box .item button, .different .choices .box .item .hero input, .hero .different .choices .box .item input {
-  margin-left: 8px;
-  line-height: 72px;
-}
-.different .choices .box #two-lines {
-  align-items: flex-start;
-  margin-top: 24px;
-}
-.different .choices .box button {
-  background-color: transparent;
-  border: 1px solid #DEDEDE;
-  color: #111111;
-}
-.different .choices .box button:hover {
-  background-color: #FAFAFA;
-}
-.different .choices .featured {
-  border: 2px solid #5773EB;
-  box-shadow: 0px 0px 24px rgba(159, 60, 236, 0.16), 0px 2px 24px rgba(17, 17, 17, 0.02);
-}
-
-.how {
-  margin: auto;
-  padding: 120px 0px;
-}
-@media all and (min-width: 2400px) {
-  .how {
-    max-width: 980px;
-  }
-}
-@media all and (min-width: 1600px) and (max-width: 2400px) {
-  .how {
-    max-width: 980px;
-  }
-}
-@media all and (min-width: 1200px) and (max-width: 1599px) {
-  .how {
-    max-width: 980px;
-  }
-}
-@media all and (min-width: 1024px) and (max-width: 1199px) {
-  .how {
-    max-width: 90%;
-  }
-}
-@media all and (min-width: 768px) and (max-width: 1024px) {
-  .how {
-    max-width: 90%;
-  }
-}
-@media all and (min-width: 320px) and (max-width: 767px) and (orientation: portrait) {
-  .how {
-    max-width: 90%;
-  }
-}
-.how h3, .how p, .how footer a, footer .how a, .how button, .how .hero input, .hero .how input {
-  text-align: center;
-  color: #4E4D4D;
-  margin-bottom: 8px;
-}
-.how .card-wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  column-gap: 16px;
-  margin-top: 40px;
-}
-@media all and (min-width: 320px) and (max-width: 767px) and (orientation: portrait) {
-  .how .card-wrapper {
-    grid-template-columns: 1fr;
-    row-gap: 24px;
-  }
-}
-.how .card-wrapper .card {
-  padding: 24px;
-  border: 1px solid #DEDEDE;
-  border-radius: 4px;
-  box-sizing: border-box;
-  display: grid;
-  justify-content: center;
-  align-items: self-end;
-}
-.how .card-wrapper .blue {
-  border: 2px solid #5773EB;
-  box-shadow: 0px 8px 24px rgba(87, 115, 235, 0.16), 0px 8px 24px rgba(17, 17, 17, 0.02);
-}
-.how .card-wrapper .blue h3 {
-  color: #5773EB;
-}
-.how .card-wrapper .green {
-  border: 2px solid #3CB7BA;
-  box-shadow: 0px 8px 24px rgba(60, 183, 186, 0.16), 0px 8px 24px rgba(17, 17, 17, 0.02);
-}
-.how .card-wrapper .green h3 {
-  color: #3CB7BA;
-}
-.how .card-wrapper .pink {
-  border: 2px solid #E6629A;
-  box-shadow: 0px 8px 24px rgba(230, 98, 154, 0.16), 0px 8px 24px rgba(17, 17, 17, 0.02);
-}
-.how .card-wrapper .pink h3 {
-  color: #E6629A;
-}
-
-.map {
-  margin: auto;
-  padding: 80px 0px;
-}
-@media all and (min-width: 2400px) {
-  .map {
-    max-width: 980px;
-  }
-}
-@media all and (min-width: 1600px) and (max-width: 2400px) {
-  .map {
-    max-width: 980px;
-  }
-}
-@media all and (min-width: 1200px) and (max-width: 1599px) {
-  .map {
-    max-width: 980px;
-  }
-}
-@media all and (min-width: 1024px) and (max-width: 1199px) {
-  .map {
-    max-width: 90%;
-  }
-}
-@media all and (min-width: 768px) and (max-width: 1024px) {
-  .map {
-    max-width: 90%;
-  }
-}
-@media all and (min-width: 320px) and (max-width: 767px) and (orientation: portrait) {
-  .map {
-    max-width: 90%;
-  }
-}
-.map img {
+.banner button {
   display: block;
-  margin: 72px auto;
-}
-.map p, .map footer a, footer .map a, .map button, .map .hero input, .hero .map input {
-  color: #4E4D4D;
-  text-align: center;
-  margin-top: 24px;
-}
-.map button {
-  color: white;
-  margin: 72px auto;
-}
-@media all and (min-width: 768px) and (max-width: 1024px) {
-  .map h2 {
-    margin-bottom: 24px;
-  }
-}
-
-@media all and (min-width: 320px) and (max-width: 767px) and (orientation: portrait) {
-  .disappear-mobile {
-    display: none;
-  }
-}
-
-footer {
-  background: #fafafa;
-}
-footer a {
-  font-size: 1em;
-}
-footer a:hover {
-  transition: 0.5s;
-  color: #E6629A;
-}
-footer .content {
-  margin: auto;
-  padding: 48px 0px;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(3, 32px);
-}
-@media all and (min-width: 2400px) {
-  footer .content {
-    max-width: 980px;
-  }
-}
-@media all and (min-width: 1600px) and (max-width: 2400px) {
-  footer .content {
-    max-width: 980px;
-  }
-}
-@media all and (min-width: 1200px) and (max-width: 1599px) {
-  footer .content {
-    max-width: 980px;
-  }
-}
-@media all and (min-width: 1024px) and (max-width: 1199px) {
-  footer .content {
-    max-width: 90%;
-  }
-}
-@media all and (min-width: 768px) and (max-width: 1024px) {
-  footer .content {
-    max-width: 90%;
-  }
-}
-@media all and (min-width: 320px) and (max-width: 767px) and (orientation: portrait) {
-  footer .content {
-    max-width: 90%;
-  }
+  margin: 32px auto;
+  font-weight: 600;
 }
 
 /*# sourceMappingURL=style.css.map */
